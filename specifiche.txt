@@ -1,0 +1,45 @@
+Il progetto si appoggia a un DB postgres di nome "azienda". Le credenziali di accesso al DB
+sono user "postgres" e pass "postgres".
+Il DB è composto 6 tabelle :
+
+- Fornitore 
+Contiene le informazioni relative al fornitore
+- Utente
+Contieni le informazioni relative all'utente e il ruolo nel sistema (cliente/admin)
+- Prodotto
+Contiene le informazioni relative al prodotto
+-RigaOrdine
+Contiene per ogni entry della tabella una riga di un ordine e il relativo ordine a cui si
+riferisce
+-Fornitore_prodotto
+Associa ad ogni prodotto i fornitori che lo trattano e a ogni fornitore i prodotti trattati
+
+Il progetto è composto da pagine JSP e da classi JAVA, segue il modello MVC per la 
+progettazione del sistema e il modello DAO per la scrittura/lettura dei dati. E' organizzato 
+in packages:
+
+it.uniroma3.action
+Contiene le classi relative alle azioni che il sistema esegue e che vengono richiamate
+dal progetto.
+
+it.uniroma3.controller
+Contiene una classe che funge da Controller per il sistema, occupandosi di processare le 
+richieste, gestire gli errori e richiamare le pagine JSP per le varie operazioni.
+
+it.uniroma3.exceptions
+Contiene una classe autogenerata per gestire le eccezioni relative all'uso del DB esterno.
+
+it.uniroma3.helper
+Contiene delle classi che si occupano di convalidare e controllare i form di inserimento
+dei campi dei nuovi oggetti del sistema (utenti,fornitori,prodotti,ecc)
+
+it.uniroma3.model
+Contiene l'implementazione degli oggetti di uso per il sistema.
+
+it.uniroma3.persistence
+Contiene le interfacce dei metodi necessari all'uso del DB esterno Postgres
+
+it.uniroma3.persistence.postgres
+Contiene i metodi necessari per interfacciarsi con il DB esterno.
+
+Nel progetto sono implementati tutti i casi di uso, anche se non in maniera totalmente completa.
